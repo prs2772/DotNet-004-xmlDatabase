@@ -1,0 +1,22 @@
+$Darkest-color: #170a1c;
+$Darker-color: #113e53;
+$Dark-color: #0b7189;
+$Medium-color: #228cdb;
+$Light-color: #5f91dc;
+$Lighter-color: #c19ab7;
+$Lightest-color: #9c95dc;
+
+header{
+  background-color: $Darkest-color;
+  color: $Lightest-color;
+}
+
+body{
+  background-color: $Darkest-color;
+  color: $Lightest-color;
+}
+
+footer{
+  background-color: $Lighter-color;
+  color: $Darkest-color;
+}

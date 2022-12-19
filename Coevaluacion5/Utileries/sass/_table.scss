@@ -1,0 +1,49 @@
+.table {
+  width: 100%;
+  display: table;
+  &--caption {
+    display: table-caption;
+    text-align: center;
+    font-size: 1.9em;
+    font-weight: bold;
+  }
+  &--header {
+    display: table-header-group;
+    background-color: $Darker-color;
+    color: $Light-color;
+    font-weight: bold;
+    font-size: 1.6em;
+    &--cell {
+      display: table-cell;
+      padding: 0.8em;
+      text-align: justify;
+      border-bottom: 0.07em solid black;
+    }
+  }
+  &--body {
+    display: table-row-group;
+    background-color: $Lightest-color;
+    color: $Darkest-color;
+    font-weight: 600;
+    &--cell {
+      display: table-cell;
+    }
+  }
+  &--row {
+    display: table-row;
+  }
+  &--footer {
+    display: table-footer-group;
+    background-color: $Darker-color;
+    color: $Light-color;
+    font-weight: bold;
+    font-size: 1.6em;
+    color: rgba(255, 255, 255, 0.45);
+    &--cell {
+      display: table-cell;
+      padding: 0.8em;
+      text-align: justify;
+      border-bottom: 0.07em solid black;
+    }
+  }
+}

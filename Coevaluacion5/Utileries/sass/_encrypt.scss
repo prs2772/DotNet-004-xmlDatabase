@@ -1,0 +1,99 @@
+.section--encrypt__main{
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.encrypt--title__main{
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.encrypt--title__secondary{
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.label--element{
+  &__ask, &__read{
+    display: block;
+    margin: 2em 0 2em 0;
+  }
+  &__ask:hover{
+    cursor: pointer;
+  }
+  &__read:hover{
+    cursor: not-allowed;
+  }
+}
+
+.input--element{
+  width: 100%;
+}
+
+.div--center-80{
+  position: relative;
+  margin: 0.4em 0 4em 0;
+}
+
+.button--submit{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  $btn-submit-base: rgb(0, 185, 185);
+  $btn-submit-secondary: #114b5f;
+
+  display: inline-block;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: $btn-submit-base;
+  font-family: "Poppins", sans-serif;
+  border: 0.1rem solid $btn-submit-base;
+  padding: 0.3rem 1rem;
+  border-radius: 0.5rem;
+  transition: 333ms ease-out;
+  background-color: $btn-submit-secondary;
+
+  &:hover {
+    background-color: $btn-submit-base;
+    color: $btn-submit-secondary;
+    box-shadow: 0 0 0.7rem $btn-submit-base,
+      0 0 2.8rem $btn-submit-base,
+      0 0 5.6rem $btn-submit-base;
+  }
+}
+
+.button--clean{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  $btn-clean-base: rgb(114, 3, 3);
+  $btn-clean-secondary: #c4cbca;
+
+  display: inline-block;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: $btn-clean-base;
+  font-family: "Poppins", sans-serif;
+  border: 0.1rem solid $btn-clean-base;
+  padding: 0.3rem 1rem;
+  border-radius: 0.5rem;
+  transition: 333ms ease-out;
+  background-color: $btn-clean-secondary;
+
+  &:hover {
+    background-color: $btn-clean-base;
+    color: $btn-clean-secondary;
+    box-shadow: 0 0 0.7rem $btn-clean-base,
+      0 0 2.8rem $btn-clean-base,
+      0 0 5.6rem $btn-clean-base;
+  }
+}

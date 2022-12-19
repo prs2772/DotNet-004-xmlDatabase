@@ -1,0 +1,56 @@
+﻿@model DataSet
+
+@using System.Data;
+
+@{
+	ViewData["Title"] = "Main Page";
+	DataTable info = Model.Tables[(int)Program.Tables.Historical];
+}
+
+<section class="section--encrypt__main">
+	<h1 class="encrypt--title__main">Idioma de encriptaci&oacute;n EFE</h1>
+	<form id="my-form" method="POST">
+		<label class="label--element__ask" for="chain-to-encrypt">
+			<p>Introduce cadena a encriptar</p>
+			<input class="input--element" type="text" id="chain-to-encrypt" name="chain-to-encrypt" required
+				placeholder="Cualquier cadena" value='@ViewData["decrypted-input"]' />
+		</label>
+		<div class="div--center-80">
+			<button class="button--submit" type="submit">Encriptar</button>
+		</div>
+		<label class="label--element__read" for="encrypted-chain">
+			<p>Cadena encriptada</p>
+			<input class="input--element" type="text" id="encrypted-chain" readonly value='@ViewData["encrypted-input"]' />
+		</label>
+		<div class="div--center-80">
+			<a class="button--clean" asp-action="Index" >&nbsp;&nbsp;Limpiar campos&nbsp;&nbsp;</a>
+		</div>
+	</form>
+</section>
+<section>
+	<h2 class="encrypt--title__secondary">Lista de palabras encriptadas:</h2>
+	<div class="table">
+		<div class="table--header">
+			<div class="table--header--cell">Ingresada</div>
+			<div class="table--header--cell">&nbsp;</div>
+			<div class="table--header--cell">Encriptada</div>
+		</div>
+		<div class="table--body">
+			@for (ushort actualRow = 1; actualRow < info.Rows.Count; actualRow++)
+			{
+				DataRow registro = info.Rows[actualRow];
+				<div class="table--row">
+					<div class="table--body--cell">
+						@registro[(int)Program.ColumnsEnum.Chain].ToString()
+					</div>
+					<div class="table--body--cell">
+						->
+					</div>
+					<div class="table--body--cell">
+						@registro[(int)Program.ColumnsEnum.Encrypt].ToString()
+					</div>
+				</div>
+			}
+		</div>
+	</div>
+</section>
